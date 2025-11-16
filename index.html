@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseTen — Infrastructure Consulting</title>
+    <meta name="description" content="BaseTen specializes in infrastructure modernization, containerization, CI/CD implementation, and DevOps consulting.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0d0d0d;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --accent: #ffffff;
+            --line: #222222;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 120px 0 200px;
+        }
+
+        h1 {
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--text-muted);
+            max-width: 600px;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+
+        .cta {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--text);
+            transition: opacity 0.3s;
+            font-weight: 400;
+        }
+
+        .cta:hover {
+            opacity: 0.6;
+        }
+
+        /* Services */
+        .services {
+            padding: 120px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-number {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+            letter-spacing: 0.2em;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-item {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--line);
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            gap: 40px;
+            transition: opacity 0.3s;
+        }
+
+        .service-item:hover {
+            opacity: 0.6;
+        }
+
+        .service-number {
+            font-size: 14px;
+            color: var(--text-muted);
+            padding-top: 8px;
+        }
+
+        .service-content h3 {
+            font-size: 36px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .service-content p {
+            color: var(--text-muted);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Tech Stack */
+        .tech {
+            padding: 120px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .tech-item {
+            font-size: 18px;
+            color: var(--text-muted);
+            padding: 20px 0;
+            transition: color 0.3s;
+        }
+
+        .tech-item:hover {
+            color: var(--text);
+        }
+
+        /* Contact */
+        .contact {
+            padding: 120px 0 200px;
+            border-top: 1px solid var(--line);
+        }
+
+        .contact h2 {
+            font-size: 72px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-link {
+            font-size: 36px;
+            color: var(--text);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .contact-link:hover {
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        footer p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+            }
+
+            .hero-subtitle {
+                font-size: 20px;
+            }
+
+            .service-content h3 {
+                font-size: 28px;
+            }
+
+            .service-item {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .contact h2 {
+                font-size: 48px;
+            }
+
+            .contact-link {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TENROX</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Infrastructure<br>Consulting</h1>
+            <p class="hero-subtitle">We modernize development workflows through containerization, automation, and strategic infrastructure transformation.</p>
+            <a href="#contact" class="cta">Start a Conversation →</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-number">01 — SERVICES</div>
+
+            <ul class="service-list">
+                <li class="service-item">
+                    <div class="service-number">01</div>
+                    <div class="service-content">
+                        <h3>SDLC Acceleration</h3>
+                        <p>Implement CI/CD pipelines, Infrastructure as Code, and GitOps workflows to automate your development lifecycle and eliminate manual bottlenecks.</p>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-number">02</div>
+                    <div class="service-content">
+                        <h3>Containerization</h3>
+                        <p>Transform legacy applications into modern, scalable container-based architectures using Kubernetes and orchestration best practices.</p>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-number">03</div>
+                    <div class="service-content">
+                        <h3>Infrastructure Migration</h3>
+                        <p>Seamless transitions to Proxmox, DNS/DHCP consolidation, and cloud-native platforms with zero-downtime strategies.</p>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-number">04</div>
+                    <div class="service-content">
+                        <h3>Security & Networking</h3>
+                        <p>Deploy WireGuard VPN, HashiCorp Vault, and zero-trust architectures to secure your distributed infrastructure.</p>
+                    </div>
+                </li>
+
+                <li class="service-item">
+                    <div class="service-number">05</div>
+                    <div class="service-content">
+                        <h3>Self-Hosted Solutions</h3>
+                        <p>Build resilient on-premises infrastructure with GitLab, private registries, and high-availability configurations.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="tech">
+        <div class="container">
+            <div class="section-number">02 — TECHNOLOGIES</div>
+            <div class="tech-grid">
+                <div class="tech-item">Docker</div>
+                <div class="tech-item">Kubernetes</div>
+                <div class="tech-item">GitLab</div>
+                <div class="tech-item">Terraform</div>
+                <div class="tech-item">Vault</div>
+                <div class="tech-item">WireGuard</div>
+                <div class="tech-item">Proxmox</div>
+                <div class="tech-item">Ansible</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Work<br>Together</h2>
+            <a href="mailto:hello@baseten.dev" class="contact-link">hello@baseten.dev</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BaseTen. Infrastructure Consulting & SDLC Solutions.</p>
+        </div>
+    </footer>
+</body>
+</html>
